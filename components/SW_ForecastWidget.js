@@ -4,7 +4,7 @@ import styled from 'styled-components/native';
 // Components
 import ForecastSplit from '../components/SW_forecast3hours'
 
-const ForecastWidget = ({ Header, weatherData }) => {
+const ForecastWidget = ({ header, weatherData }) => {
 
   return (
 
@@ -14,20 +14,20 @@ const ForecastWidget = ({ Header, weatherData }) => {
 
         <ForecastHeaderContainer>
 
-          <ForecastHeader>{Header}</ForecastHeader>
+          <ForecastHeader>{header}</ForecastHeader>
 
         </ForecastHeaderContainer>
 
         <ForecastSideScroll horizontal={true} contentContainerStyle={{paddingRight:5}}>
 
-          <ForecastSplit Time = '03:00' Forecast = {weatherData['3']}></ForecastSplit>
-          <ForecastSplit Time = '06:00' Forecast = {weatherData['6']}></ForecastSplit>
-          <ForecastSplit Time = '09:00' Forecast = {weatherData['9']}></ForecastSplit>
-          <ForecastSplit Time = '12:00' Forecast = {weatherData['12']}></ForecastSplit>
-          <ForecastSplit Time = '15:00' Forecast = {weatherData['15']}></ForecastSplit>
-          <ForecastSplit Time = '18:00' Forecast = {weatherData['18']}></ForecastSplit>
-          <ForecastSplit Time = '21:00' Forecast = {weatherData['21']}></ForecastSplit>
-          <ForecastSplit Time = '00:00' Forecast = {weatherData['24']}></ForecastSplit>
+          <ForecastSplit time = '03:00' forecast = {weatherData['3']}></ForecastSplit>
+          <ForecastSplit time = '06:00' forecast = {weatherData['6']}></ForecastSplit>
+          <ForecastSplit time = '09:00' forecast = {weatherData['9']}></ForecastSplit>
+          <ForecastSplit time = '12:00' forecast = {weatherData['12']}></ForecastSplit>
+          <ForecastSplit time = '15:00' forecast = {weatherData['15']}></ForecastSplit>
+          <ForecastSplit time = '18:00' forecast = {weatherData['18']}></ForecastSplit>
+          <ForecastSplit time = '21:00' forecast = {weatherData['21']}></ForecastSplit>
+          <ForecastSplit time = '00:00' forecast = {weatherData['24']}></ForecastSplit>
 
         </ForecastSideScroll>
 

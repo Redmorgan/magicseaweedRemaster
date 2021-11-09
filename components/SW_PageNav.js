@@ -12,7 +12,7 @@ import calendarImg from "../images/calendarIcon.png";
 
 const Tab = createMaterialTopTabNavigator();
 
-const SW_PageNav = ({ ID, LiveCamState }) => {
+const SW_PageNav = ({ id, liveCamState }) => {
 
   return (
     <Tab.Navigator
@@ -41,12 +41,12 @@ const SW_PageNav = ({ ID, LiveCamState }) => {
     >
       <Tab.Screen
         name={"Overview"}
-        children={() => <OverviewScreen id={ID} liveCamState={LiveCamState}/>}
+        children={() => <OverviewScreen id={id} liveCamState={liveCamState}/>}
         options={{ tabBarIcon: () => <WaveIcon source={waveImg} /> }}
       />
       <Tab.Screen
         name="Forecast"
-        children={() => <ForecastScreen id={ID}/>}
+        children={() => <ForecastScreen id={id}/>}
         options={{ tabBarIcon: () => <CalendarIcon source={calendarImg} /> }}
       />
     </Tab.Navigator>

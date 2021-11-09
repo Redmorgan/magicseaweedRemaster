@@ -1,13 +1,13 @@
 import * as React from 'react';
 import styled from 'styled-components/native';
 
-const Forecast3Hour = ({ Time, Forecast }) => {
+const Forecast3Hour = ({ time, forecast }) => {
 
   return (
 
     <Forecast3HourContainer>
 
-        <CurrentTime>{Time}</CurrentTime>
+        <CurrentTime>{time}</CurrentTime>
 
         <ForecastData>
 
@@ -20,8 +20,8 @@ const Forecast3Hour = ({ Time, Forecast }) => {
 
             <ForecastDataRight>
 
-                <SwellHeight style={{fontWeight:'bold'}}>{Forecast['swell']}ft</SwellHeight>
-                <WindSpeed style={{fontWeight:'bold'}}>{Forecast['wind']}mph</WindSpeed>
+                <SwellHeight style={{fontWeight:'bold'}}>{forecast['swell']}ft</SwellHeight>
+                <WindSpeed style={{fontWeight:'bold'}}>{forecast['wind']}mph</WindSpeed>
 
             </ForecastDataRight>
 

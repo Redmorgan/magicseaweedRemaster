@@ -5,7 +5,14 @@ import { Vibration } from 'react-native';
 // Images
 import CloseButtonImg from '../images/greyCloseIcon.png'
 
-const SW_Modal = ({onPress, title, state, imgURL}) => {
+const SW_Modal = ({onPress, title, state, img}) => {
+
+    function closeModal(){
+
+        onPress()
+        Vibration.vibrate(5)
+
+    }
 
   return (
 
@@ -20,7 +27,7 @@ const SW_Modal = ({onPress, title, state, imgURL}) => {
 
                 <ModalHeader>
 
-                    <ModalCloseButton underlayColor={'transparent'} onPress={() => {onPress(); Vibration.vibrate(5)}}>
+                    <ModalCloseButton underlayColor={'transparent'} onPress={() => {closeModal()}}>
 
                         <ModalCloseIcon source={CloseButtonImg}/>
 
@@ -32,7 +39,7 @@ const SW_Modal = ({onPress, title, state, imgURL}) => {
 
                 <ModalInfoBody>
 
-
+                    <ModalImage source={img}/>
 
                 </ModalInfoBody>
 
@@ -103,6 +110,15 @@ const ModalCloseIcon = styled.Image`
 const ModalInfoBody = styled.View`
 
     width:90%
+    height:80%
+    justify-content:center;
+    align-items:center;
+
+`
+
+const ModalImage = styled.Image`
+
+    width:80%
     height:80%
 
 `

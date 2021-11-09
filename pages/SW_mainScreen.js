@@ -19,7 +19,7 @@ const SW_mainScreen = ({ route }) => {
 
       <MainBody>
 
-        <SW_PageNav ID={route.params.beachID} LiveCamState={route.params.liveCamState}/>
+        <SW_PageNav id={route.params.beachID} liveCamState={route.params.liveCamState}/>
 
       </MainBody>
 

@@ -52,7 +52,13 @@ const BeachSelector = ({ beachName, navigate, beachID, listType, liveCamBool, up
     storeFavourite(!favouriteState)
 
   }
+  
+  function openBeach(){
 
+    Vibration.vibrate(5);
+    navigate('Main', {beachID:beachID, BeachName:beachName, liveCamState:liveCamBool})
+
+  }
 
   getFavourite()
 
@@ -68,7 +74,7 @@ const BeachSelector = ({ beachName, navigate, beachID, listType, liveCamBool, up
 
         </FavouriteBeachTouchable>
 
-        <SelectBeachTouchable onPress={() => {Vibration.vibrate(5); navigate('Main', {beachID:beachID, BeachName:beachName, liveCamState:liveCamBool})}} underlayColor={'transparent'}>
+        <SelectBeachTouchable onPress={() => {openBeach();}} underlayColor={'transparent'}>
 
           <SelectBeachTouchableWrapper>
 
@@ -102,7 +108,7 @@ const BeachSelector = ({ beachName, navigate, beachID, listType, liveCamBool, up
 
         </FavouriteBeachTouchable>
 
-        <SelectBeachTouchable onPress={() => {Vibration.vibrate(5); navigate('Main', {beachID:beachID, BeachName:beachName, liveCamState:liveCamBool})}} underlayColor={'transparent'}>
+        <SelectBeachTouchable onPress={() => {openBeach();}} underlayColor={'transparent'}>
 
           <SelectBeachTouchableWrapper>
 

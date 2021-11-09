@@ -7,23 +7,23 @@ import ForecastWidget from './SW_ForecastWidget';
 // JSON
 import beachesJson from '../beaches.json'
 
-const ForecastScreen = (props) => {
+const ForecastScreen = ({ id }) => {
 
-  var beachData = beachesJson.filter(b => b.id === props.id)
+  var beachData = beachesJson.filter(b => b.id === id)
 
   beachData = beachData[0]
 
   return (
 
-    <OverviewScroll>
+    <OverviewScroll contentContainerStyle={{paddingBottom:10}}>
 
-      <ForecastWidget Header='Mon' weatherData={beachData['days']['monday']}></ForecastWidget>
-      <ForecastWidget Header='Tue' weatherData={beachData['days']['tuesday']}></ForecastWidget>
-      <ForecastWidget Header='Wed' weatherData={beachData['days']['wednesday']}></ForecastWidget>
-      <ForecastWidget Header='Thu' weatherData={beachData['days']['thursday']}></ForecastWidget>
-      <ForecastWidget Header='Fri' weatherData={beachData['days']['friday']}></ForecastWidget>
-      <ForecastWidget Header='Sat' weatherData={beachData['days']['saturday']}></ForecastWidget>
-      <ForecastWidget Header='Sun' weatherData={beachData['days']['sunday']}></ForecastWidget>
+      <ForecastWidget header='Mon' weatherData={beachData['days']['monday']}></ForecastWidget>
+      <ForecastWidget header='Tue' weatherData={beachData['days']['tuesday']}></ForecastWidget>
+      <ForecastWidget header='Wed' weatherData={beachData['days']['wednesday']}></ForecastWidget>
+      <ForecastWidget header='Thu' weatherData={beachData['days']['thursday']}></ForecastWidget>
+      <ForecastWidget header='Fri' weatherData={beachData['days']['friday']}></ForecastWidget>
+      <ForecastWidget header='Sat' weatherData={beachData['days']['saturday']}></ForecastWidget>
+      <ForecastWidget header='Sun' weatherData={beachData['days']['sunday']}></ForecastWidget>
 
     </OverviewScroll>
     

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Text, Vibration, Modal, Dimensions } from 'react-native';
+import { Text, Vibration } from 'react-native';
 import styled from 'styled-components/native';
 import { LineChart } from 'react-native-chart-kit';
 
@@ -13,6 +13,8 @@ import beachPhoto from '../images/beachPhoto.jpg'
 import playButton from '../images/playButton.png'
 import sun from '../images/sunIcon.png'
 import moon from '../images/moonIcon.png'
+import swellHelp from '../images/swellHelp.png'
+import windHelp from '../images/windHelp.png'
 
 import beachesJson from '../beaches.json'
 
@@ -54,7 +56,7 @@ const OverviewScreen = ({id, liveCamState}) => {
         <QuickOverviewContainer>
             
             {/* Swell data popup */}
-            <SW_Modal title='Swell Data Help' onPress={() => setSwellModal(false)} state = {swellHelpOpen}/>
+            <SW_Modal title='Swell Data Help' img={swellHelp} onPress={() => setSwellModal(false)} state = {swellHelpOpen}/>
 
             <QuickOverviewSwellInfo>
 
@@ -74,7 +76,13 @@ const OverviewScreen = ({id, liveCamState}) => {
 
                     <SwellDirectionImage source={downArrow} style={{transform: [{ rotate: `${beachData['swell']['swellDirection']}deg`}] }}/>
 
-                    <SwellInfoLabel>{beachData['swell']['compassDirection']}</SwellInfoLabel>
+                    <QuickOverviewWindDirectionData>
+
+                        <SwellInfoLabel style={{fontWeight:'bold'}}>{beachData['swell']['compassDirection']}</SwellInfoLabel>
+
+                        <SwellInfoLabel>{` (${beachData['swell']['swellDirection']}°)`}</SwellInfoLabel>
+
+                    </QuickOverviewWindDirectionData>
 
                     <SwellInfoLabel>{beachData['swell']['waveSpeed']}</SwellInfoLabel>
 
@@ -83,7 +91,7 @@ const OverviewScreen = ({id, liveCamState}) => {
             </QuickOverviewSwellInfo>
 
             {/* Wind data popup */}
-            <SW_Modal title='Wind Data Help' onPress={() => setWindModal(false)} state = {windHelpOpen}/>
+            <SW_Modal title='Wind Data Help' img={windHelp} onPress={() => setWindModal(false)} state = {windHelpOpen}/>
 
             <QuickOverviewWindInfo>
 
@@ -113,7 +121,7 @@ const OverviewScreen = ({id, liveCamState}) => {
 
                         <QuickOverViewWindDirectionLabel>{beachData['wind']['compassDirection']}</QuickOverViewWindDirectionLabel>
 
-                        <QuickOverviewWindDegreesLabel> (180°)</QuickOverviewWindDegreesLabel>
+                        <QuickOverviewWindDegreesLabel>{` (${beachData['wind']['windDirection']}°)`}</QuickOverviewWindDegreesLabel>
                         
                     </QuickOverviewWindDirectionData>
 

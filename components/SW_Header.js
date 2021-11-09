@@ -13,17 +13,23 @@ const SW_Header = ({ name, beachName }) => {
 
   const navigation = useNavigation();
 
+  function returnHome() {
+
+    Vibration.vibrate(10)
+    navigation.goBack()
+
+  }
+
   return (
 
     <Header>
 
-        {(name == 'main') ? <BackArrow onPress={() => {Vibration.vibrate(10); navigation.goBack();}} underlayColor={'transparent'}><BackArrowImg source = {backArrow}/></BackArrow>:<SW_logo source={msw_logo}/>}
+        {(name == 'main') ? <BackArrow onPress={() => {returnHome();}} underlayColor={'transparent'}><BackArrowImg source = {backArrow}/></BackArrow>:<SW_logo source={msw_logo}/>}
 
         {(name != 'main')?
         <HeaderSearchContainer>
 
-            <HeaderSearch placeholder="Bournemouth Beach"
-              onPress={() => setShowDropdown(true)}/>
+            <HeaderSearch placeholder="Bournemouth Beach" onPress={() => setShowDropdown(true)}/>
 
             <SearchIconTouch onPress={() => Vibration.vibrate(10)} underlayColor={'transparent'}>
 
@@ -35,6 +41,7 @@ const SW_Header = ({ name, beachName }) => {
         
         <HeaderLabel>{beachName}</HeaderLabel>}
 
+        {/* Feature removed due to lack of time */}
         {/* {(name != 'main')?
         <SW_settings onPress={() => Vibration.vibrate(10)} underlayColor={'transparent'}>
 
