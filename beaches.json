@@ -1,0 +1,806 @@
+[
+    {   "id": "0",
+        "name":"",
+        "swell":{
+            "swellHeight":"",
+            "swellUnit":"",
+            "swellDirection":"",
+            "waveSpeed":"",
+            "compassDirection":""},
+        "wind":{
+            "windSpeed":"",
+            "windUnit":"",
+            "windPosition":"",
+            "windDirection":"",
+            "compassDirection":""},
+        "airTemp":"",
+        "seaTemp":"",
+        "localTime":"",
+        "light":{
+            "firstLight":"",
+            "lastLight":"",
+            "sunrise":"",
+            "sunset":"",
+            "current":""
+        },
+        "days":{
+            "monday":{
+                "3":{
+                    "swell":"",
+                    "wind":""
+                },
+                "6":{
+                    "swell":"",
+                    "wind":""
+                },
+                "9":{
+                    "swell":"",
+                    "wind":""
+                },
+                "12":{
+                    "swell":"",
+                    "wind":""
+                },
+                "15":{
+                    "swell":"",
+                    "wind":""
+                },
+                "18":{
+                    "swell":"",
+                    "wind":""
+                },
+                "21":{
+                    "swell":"",
+                    "wind":""
+                },
+                "24":{
+                    "swell":"",
+                    "wind":""
+                }
+            },
+            "tuesday":{
+                "3":{
+                    "swell":"",
+                    "wind":""
+                },
+                "6":{
+                    "swell":"",
+                    "wind":""
+                },
+                "9":{
+                    "swell":"",
+                    "wind":""
+                },
+                "12":{
+                    "swell":"",
+                    "wind":""
+                },
+                "15":{
+                    "swell":"",
+                    "wind":""
+                },
+                "18":{
+                    "swell":"",
+                    "wind":""
+                },
+                "21":{
+                    "swell":"",
+                    "wind":""
+                },
+                "24":{
+                    "swell":"",
+                    "wind":""
+                }
+            },
+            "wednesday":{
+                "3":{
+                    "swell":"",
+                    "wind":""
+                },
+                "6":{
+                    "swell":"",
+                    "wind":""
+                },
+                "9":{
+                    "swell":"",
+                    "wind":""
+                },
+                "12":{
+                    "swell":"",
+                    "wind":""
+                },
+                "15":{
+                    "swell":"",
+                    "wind":""
+                },
+                "18":{
+                    "swell":"",
+                    "wind":""
+                },
+                "21":{
+                    "swell":"",
+                    "wind":""
+                },
+                "24":{
+                    "swell":"",
+                    "wind":""
+                }
+            },
+            "thursday":{
+                "3":{
+                    "swell":"",
+                    "wind":""
+                },
+                "6":{
+                    "swell":"",
+                    "wind":""
+                },
+                "9":{
+                    "swell":"",
+                    "wind":""
+                },
+                "12":{
+                    "swell":"",
+                    "wind":""
+                },
+                "15":{
+                    "swell":"",
+                    "wind":""
+                },
+                "18":{
+                    "swell":"",
+                    "wind":""
+                },
+                "21":{
+                    "swell":"",
+                    "wind":""
+                },
+                "24":{
+                    "swell":"",
+                    "wind":""
+                }
+            },
+            "friday":{
+                "3":{
+                    "swell":"",
+                    "wind":""
+                },
+                "6":{
+                    "swell":"",
+                    "wind":""
+                },
+                "9":{
+                    "swell":"",
+                    "wind":""
+                },
+                "12":{
+                    "swell":"",
+                    "wind":""
+                },
+                "15":{
+                    "swell":"",
+                    "wind":""
+                },
+                "18":{
+                    "swell":"",
+                    "wind":""
+                },
+                "21":{
+                    "swell":"",
+                    "wind":""
+                },
+                "24":{
+                    "swell":"",
+                    "wind":""
+                }
+            },
+            "saturday":{
+                "3":{
+                    "swell":"",
+                    "wind":""
+                },
+                "6":{
+                    "swell":"",
+                    "wind":""
+                },
+                "9":{
+                    "swell":"",
+                    "wind":""
+                },
+                "12":{
+                    "swell":"",
+                    "wind":""
+                },
+                "15":{
+                    "swell":"",
+                    "wind":""
+                },
+                "18":{
+                    "swell":"",
+                    "wind":""
+                },
+                "21":{
+                    "swell":"",
+                    "wind":""
+                },
+                "24":{
+                    "swell":"",
+                    "wind":""
+                }
+            },
+            "sunday":{
+                "3":{
+                    "swell":"",
+                    "wind":""
+                },
+                "6":{
+                    "swell":"",
+                    "wind":""
+                },
+                "9":{
+                    "swell":"",
+                    "wind":""
+                },
+                "12":{
+                    "swell":"",
+                    "wind":""
+                },
+                "15":{
+                    "swell":"",
+                    "wind":""
+                },
+                "18":{
+                    "swell":"",
+                    "wind":""
+                },
+                "21":{
+                    "swell":"",
+                    "wind":""
+                },
+                "24":{
+                    "swell":"",
+                    "wind":""
+                }
+            }
+        },
+        "tide":["","","","","","","",""],
+        "LiveCam":""
+    },
+    {   "id": "1",
+        "name":"Bournemouth Beach",
+        "swell":{
+            "swellHeight":"15",
+            "swellUnit":"ft",
+            "swellDirection":"66",
+            "waveSpeed":"5.5ft @ 6s",
+            "compassDirection":"WSW"},
+        "wind":{
+            "windSpeed":"21",
+            "windUnit":"mph",
+            "windPosition":"Onshore",
+            "windDirection":"180",
+            "compassDirection":"N"},
+        "airTemp":"16",
+        "seaTemp":"15",
+        "localTime":"15:15",
+        "light":{
+            "firstLight":"06:27",
+            "lastLight":"17:14",
+            "sunrise":"07:01",
+            "sunset":"16:40",
+            "current":"light"
+        },
+        "days":{
+            "monday":{
+                "3":{
+                    "swell":"1",
+                    "wind":"11"
+                },
+                "6":{
+                    "swell":"2",
+                    "wind":"13"
+                },
+                "9":{
+                    "swell":"4",
+                    "wind":"12"
+                },
+                "12":{
+                    "swell":"4",
+                    "wind":"15"
+                },
+                "15":{
+                    "swell":"5",
+                    "wind":"20"
+                },
+                "18":{
+                    "swell":"4",
+                    "wind":"16"
+                },
+                "21":{
+                    "swell":"3",
+                    "wind":"18"
+                },
+                "24":{
+                    "swell":"2",
+                    "wind":"17"
+                }
+            },
+            "tuesday":{
+                "3":{
+                    "swell":"2",
+                    "wind":"10"
+                },
+                "6":{
+                    "swell":"3",
+                    "wind":"12"
+                },
+                "9":{
+                    "swell":"5",
+                    "wind":"11"
+                },
+                "12":{
+                    "swell":"5",
+                    "wind":"14"
+                },
+                "15":{
+                    "swell":"6",
+                    "wind":"19"
+                },
+                "18":{
+                    "swell":"5",
+                    "wind":"15"
+                },
+                "21":{
+                    "swell":"4",
+                    "wind":"17"
+                },
+                "24":{
+                    "swell":"3",
+                    "wind":"16"
+                }
+            },
+            "wednesday":{
+                "3":{
+                    "swell":"1",
+                    "wind":"11"
+                },
+                "6":{
+                    "swell":"2",
+                    "wind":"13"
+                },
+                "9":{
+                    "swell":"4",
+                    "wind":"12"
+                },
+                "12":{
+                    "swell":"4",
+                    "wind":"15"
+                },
+                "15":{
+                    "swell":"5",
+                    "wind":"20"
+                },
+                "18":{
+                    "swell":"4",
+                    "wind":"16"
+                },
+                "21":{
+                    "swell":"3",
+                    "wind":"18"
+                },
+                "24":{
+                    "swell":"2",
+                    "wind":"17"
+                }
+            },
+            "thursday":{
+                "3":{
+                    "swell":"2",
+                    "wind":"10"
+                },
+                "6":{
+                    "swell":"3",
+                    "wind":"12"
+                },
+                "9":{
+                    "swell":"5",
+                    "wind":"11"
+                },
+                "12":{
+                    "swell":"5",
+                    "wind":"14"
+                },
+                "15":{
+                    "swell":"6",
+                    "wind":"19"
+                },
+                "18":{
+                    "swell":"5",
+                    "wind":"15"
+                },
+                "21":{
+                    "swell":"4",
+                    "wind":"17"
+                },
+                "24":{
+                    "swell":"3",
+                    "wind":"16"
+                }
+            },
+            "friday":{
+                "3":{
+                    "swell":"1",
+                    "wind":"11"
+                },
+                "6":{
+                    "swell":"2",
+                    "wind":"13"
+                },
+                "9":{
+                    "swell":"4",
+                    "wind":"12"
+                },
+                "12":{
+                    "swell":"4",
+                    "wind":"15"
+                },
+                "15":{
+                    "swell":"5",
+                    "wind":"20"
+                },
+                "18":{
+                    "swell":"4",
+                    "wind":"16"
+                },
+                "21":{
+                    "swell":"3",
+                    "wind":"18"
+                },
+                "24":{
+                    "swell":"2",
+                    "wind":"17"
+                }
+            },
+            "saturday":{
+                "3":{
+                    "swell":"2",
+                    "wind":"10"
+                },
+                "6":{
+                    "swell":"3",
+                    "wind":"12"
+                },
+                "9":{
+                    "swell":"5",
+                    "wind":"11"
+                },
+                "12":{
+                    "swell":"5",
+                    "wind":"14"
+                },
+                "15":{
+                    "swell":"6",
+                    "wind":"19"
+                },
+                "18":{
+                    "swell":"5",
+                    "wind":"15"
+                },
+                "21":{
+                    "swell":"4",
+                    "wind":"17"
+                },
+                "24":{
+                    "swell":"3",
+                    "wind":"16"
+                }
+            },
+            "sunday":{
+                "3":{
+                    "swell":"1",
+                    "wind":"11"
+                },
+                "6":{
+                    "swell":"2",
+                    "wind":"13"
+                },
+                "9":{
+                    "swell":"4",
+                    "wind":"12"
+                },
+                "12":{
+                    "swell":"4",
+                    "wind":"15"
+                },
+                "15":{
+                    "swell":"5",
+                    "wind":"20"
+                },
+                "18":{
+                    "swell":"4",
+                    "wind":"16"
+                },
+                "21":{
+                    "swell":"3",
+                    "wind":"18"
+                },
+                "24":{
+                    "swell":"2",
+                    "wind":"17"
+                }
+            }
+        },
+        "tide":[1.83,1.99,0.85,2.18,1.83,1.92,0.76,1.02],
+        "LiveCam":"true"
+    },
+    {
+        "id": "2",
+        "name": "West Wittering",
+        "swell": {
+          "swellHeight": "22",
+          "swellUnit": "ft",
+          "swellDirection": "225",
+          "waveSpeed": "6.3ft @ 3s",
+          "compassDirection": "NE"
+        },
+        "wind": {
+          "windSpeed": "15",
+          "windUnit": "mph",
+          "windPosition": "Offshore",
+          "windDirection": "0",
+          "compassDirection": "S"
+        },
+        "airTemp": "13",
+        "seaTemp": "15",
+        "localTime": "18:15",
+        "light": {
+          "firstLight": "6:27am",
+          "lastLight": "5:14pm",
+          "sunrise": "7:01am",
+          "sunset": "4:40pm",
+          "current": "dark"
+        },
+        "days": {
+          "monday": {
+            "3": {
+              "swell": "1",
+              "wind": "11"
+            },
+            "6": {
+              "swell": "2",
+              "wind": "13"
+            },
+            "9": {
+              "swell": "4",
+              "wind": "12"
+            },
+            "12": {
+              "swell": "4",
+              "wind": "15"
+            },
+            "15": {
+              "swell": "5",
+              "wind": "20"
+            },
+            "18": {
+              "swell": "4",
+              "wind": "16"
+            },
+            "21": {
+              "swell": "3",
+              "wind": "18"
+            },
+            "24": {
+              "swell": "2",
+              "wind": "17"
+            }
+          },
+          "tuesday": {
+            "3": {
+              "swell": "2",
+              "wind": "10"
+            },
+            "6": {
+              "swell": "3",
+              "wind": "12"
+            },
+            "9": {
+              "swell": "5",
+              "wind": "11"
+            },
+            "12": {
+              "swell": "5",
+              "wind": "14"
+            },
+            "15": {
+              "swell": "6",
+              "wind": "19"
+            },
+            "18": {
+              "swell": "5",
+              "wind": "15"
+            },
+            "21": {
+              "swell": "4",
+              "wind": "17"
+            },
+            "24": {
+              "swell": "3",
+              "wind": "16"
+            }
+          },
+          "wednesday": {
+            "3": {
+              "swell": "1",
+              "wind": "11"
+            },
+            "6": {
+              "swell": "2",
+              "wind": "13"
+            },
+            "9": {
+              "swell": "4",
+              "wind": "12"
+            },
+            "12": {
+              "swell": "4",
+              "wind": "15"
+            },
+            "15": {
+              "swell": "5",
+              "wind": "20"
+            },
+            "18": {
+              "swell": "4",
+              "wind": "16"
+            },
+            "21": {
+              "swell": "3",
+              "wind": "18"
+            },
+            "24": {
+              "swell": "2",
+              "wind": "17"
+            }
+          },
+          "thursday": {
+            "3": {
+              "swell": "2",
+              "wind": "10"
+            },
+            "6": {
+              "swell": "3",
+              "wind": "12"
+            },
+            "9": {
+              "swell": "5",
+              "wind": "11"
+            },
+            "12": {
+              "swell": "5",
+              "wind": "14"
+            },
+            "15": {
+              "swell": "6",
+              "wind": "19"
+            },
+            "18": {
+              "swell": "5",
+              "wind": "15"
+            },
+            "21": {
+              "swell": "4",
+              "wind": "17"
+            },
+            "24": {
+              "swell": "3",
+              "wind": "16"
+            }
+          },
+          "friday": {
+            "3": {
+              "swell": "1",
+              "wind": "11"
+            },
+            "6": {
+              "swell": "2",
+              "wind": "13"
+            },
+            "9": {
+              "swell": "4",
+              "wind": "12"
+            },
+            "12": {
+              "swell": "4",
+              "wind": "15"
+            },
+            "15": {
+              "swell": "5",
+              "wind": "20"
+            },
+            "18": {
+              "swell": "4",
+              "wind": "16"
+            },
+            "21": {
+              "swell": "3",
+              "wind": "18"
+            },
+            "24": {
+              "swell": "2",
+              "wind": "17"
+            }
+          },
+          "saturday": {
+            "3": {
+              "swell": "2",
+              "wind": "10"
+            },
+            "6": {
+              "swell": "3",
+              "wind": "12"
+            },
+            "9": {
+              "swell": "5",
+              "wind": "11"
+            },
+            "12": {
+              "swell": "5",
+              "wind": "14"
+            },
+            "15": {
+              "swell": "6",
+              "wind": "19"
+            },
+            "18": {
+              "swell": "5",
+              "wind": "15"
+            },
+            "21": {
+              "swell": "4",
+              "wind": "17"
+            },
+            "24": {
+              "swell": "3",
+              "wind": "16"
+            }
+          },
+          "sunday": {
+            "3": {
+              "swell": "1",
+              "wind": "11"
+            },
+            "6": {
+              "swell": "2",
+              "wind": "13"
+            },
+            "9": {
+              "swell": "4",
+              "wind": "12"
+            },
+            "12": {
+              "swell": "4",
+              "wind": "15"
+            },
+            "15": {
+              "swell": "5",
+              "wind": "20"
+            },
+            "18": {
+              "swell": "4",
+              "wind": "16"
+            },
+            "21": {
+              "swell": "3",
+              "wind": "18"
+            },
+            "24": {
+              "swell": "2",
+              "wind": "17"
+            }
+          }
+        },
+        "tide":[2.01,1.85,2.02,1.1,1.98,1.82,1.9,0.94],
+        "LiveCam":"false"
+    }
+]
