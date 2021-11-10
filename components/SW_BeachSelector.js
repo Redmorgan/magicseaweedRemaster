@@ -1,3 +1,8 @@
+/**
+ * @fileoverview This component is the item that appears in the flat lists on the home screen that a user can press to open a beach or to
+ * add/remove a beach from their favourites.
+ */
+
 import React, {useState} from 'react';
 import styled from 'styled-components/native';
 import { Vibration } from 'react-native';
@@ -11,8 +16,16 @@ import caretImg from '../images/caretRight.png'
 
 const BeachSelector = ({ beachName, navigate, beachID, listType, liveCamBool, updateRecentList, updateFavouriteList }) => {
 
+  /** @const {bool} favouriteState holds the favourite state of the beach based on the stored async data. */
   const [favouriteState, setFavourite] = useState(false);
 
+  /**
+   * @summary Uses Aysnc storage to save the favourite state of a beach against its ID.
+   * 
+   * @description Takes a boolean value and saves it against the ID of the beach that was passed through the props when the component was initialised.
+   *  
+   * @param {boolean} value - The new favourite saved of the beach to be saved/updated. 
+   */
   const storeFavourite = async (value) => {
     try {
 
@@ -25,6 +38,13 @@ const BeachSelector = ({ beachName, navigate, beachID, listType, liveCamBool, up
     }
   }
 
+  /**
+   * @summary Pulls the data stored against the keyvalue pair of the beachID and sets the favourite state based of it.
+   * 
+   * @description getFavourite takes the beachID prop that passed into the component and uses it to find out if there is anything saved against it,
+   * if the value saved against it is true then the favourite state gets set to TRUE, for anything else however (returns FALSE or NULL) the favourite
+   * state is set to false.
+   */
   const getFavourite = async () => {
     try {
       const value = await AsyncStorage.getItem(beachID)
@@ -45,6 +65,9 @@ const BeachSelector = ({ beachName, navigate, beachID, listType, liveCamBool, up
     }
   }
 
+  /**
+   * @summary an onPress function that updates the favourite state of a beach.
+   */
   function updateFavourite(){
 
     Vibration.vibrate(5)
@@ -53,6 +76,9 @@ const BeachSelector = ({ beachName, navigate, beachID, listType, liveCamBool, up
 
   }
   
+  /**
+   * @summary an onPress function that opens the selected beach.
+   */
   function openBeach(){
 
     Vibration.vibrate(5);
@@ -152,7 +178,7 @@ const BeachSelectorContainer = styled.View`
   align-items:center;
   border-radius:10px;
   background-color:#023047;
-  margin-bottom:10px
+  margin-bottom:10px;
 
 `
 const FavouriteBeachTouchable = styled.TouchableHighlight`
@@ -169,23 +195,20 @@ const FavouriteBeachImage = styled.Image`
   height:35px;
 
 `
-
 const SelectBeachTouchable = styled.TouchableHighlight`
 
-  width:83%
-  height:100%
+  width:83%;
+  height:100%;
   justify-content:center;
 
 `
-
 const SelectBeachTouchableWrapper = styled.View`
 
-  width:100%
+  width:100%;
   display:flex;
   flex-direction:row
 
 `
-
 const BeachNameHeader = styled.Text`
 
   color:#ffffff;
@@ -193,26 +216,23 @@ const BeachNameHeader = styled.Text`
   font-weight:bold;
 
 `
-
 const BeachSelectorRightAlign = styled.View`
 
   position:absolute;
-  right:0
+  right:0;
   display:flex;
   flex-direction:row;
   align-items:center;
-  height:100%
+  height:100%;
 
 `
-
 const LiveCam = styled.Image`
 
-  width:20px
-  height:20px
-  margin-right:10px
+  width:20px;
+  height:20px;
+  margin-right:10px;
 
 `
-
 const RightCaret = styled.Image`
 
   width:35px;

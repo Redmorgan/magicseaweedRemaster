@@ -1,3 +1,7 @@
+/**
+ * @fileoverview This component displays the 8 3-hour interval widgets in a horizontal scrollview, within the compoenent you can
+ * see the swell height and the wind speed for a 24 period on a specified day.
+ */
 import * as React from 'react';
 import styled from 'styled-components/native';
 
@@ -59,7 +63,6 @@ const ForecastWrapper = styled.View`
   flex-direction:row;
 
 `
-
 const ForecastHeaderContainer = styled.View`
 
   height:100%;
@@ -73,14 +76,12 @@ const ForecastHeaderContainer = styled.View`
   border-bottom-left-radius:10px ;
 
 `
-
 const ForecastHeader = styled.Text`
 
   font-size:30px;
   color:#ffffff;
   
 `
-
 const ForecastSideScroll = styled.ScrollView`
 
   width:80%;
@@ -91,6 +92,5 @@ const ForecastSideScroll = styled.ScrollView`
   border-bottom-right-radius:10px;
 
 `
-
 
 export default ForecastWidget

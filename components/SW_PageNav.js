@@ -1,3 +1,6 @@
+/**
+ * @fileoverview Contains the page navigation component used for navigating between the 'Overview' and the 'Forecast' tab.
+ */
 import * as React from "react";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import styled from "styled-components/native";
@@ -58,12 +61,12 @@ const WaveIcon = styled.Image`
   width:30px;
   height:30px;
 
-`;
+`
 const CalendarIcon = styled.Image`
 
   width:30px;
   height:30px;
 
-`;
+`
 
 export default SW_PageNav;

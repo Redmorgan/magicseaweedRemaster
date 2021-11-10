@@ -1,3 +1,7 @@
+/**
+ * @fileoverview The header for the application that appears at the top of every page in the app, certain parts of the
+ * header change based on what page is currently open.
+ */
 import React from 'react';
 import { Vibration } from 'react-native';
 import styled from 'styled-components/native'
@@ -13,6 +17,9 @@ const SW_Header = ({ name, beachName }) => {
 
   const navigation = useNavigation();
 
+  /**
+   * @summary Used as an onPress to take the user back to the home screen.
+   */
   function returnHome() {
 
     Vibration.vibrate(10)
@@ -56,9 +63,9 @@ const SW_Header = ({ name, beachName }) => {
 
 const Header = styled.View`
 
-  width:100%
-  height:80px
-  background-color:#219EBC
+  width:100%;
+  height:80px;
+  background-color:#219EBC;
   position:absolute;
   top:0;
   display:flex;
@@ -66,8 +73,8 @@ const Header = styled.View`
   justify-content:center
   flex-direction:row;
   z-index:2;
-`
 
+`
 const SW_logo = styled.Image`
 
   height:20px;
@@ -78,7 +85,6 @@ const SW_logo = styled.Image`
   top:20px;
 
 `
-
 const BackArrow = styled.TouchableOpacity`
 
   height:30px;
@@ -87,16 +93,13 @@ const BackArrow = styled.TouchableOpacity`
   left:20px;
   top:35px;
 
-
 `
-
 const BackArrowImg = styled.Image`
 
-  width:100%
-  height:100%
+  width:100%;
+  height:100%;
 
 `
-
 const HeaderSearchContainer = styled.View`
 
   width:60%;
@@ -111,7 +114,6 @@ const HeaderSearchContainer = styled.View`
   flex-direction:row;
 
 `
-
 const SearchIconTouch = styled.TouchableHighlight`
 
   height:30px;
@@ -126,7 +128,6 @@ const HeaderSearchIcon = styled.Image`
   width:100%;
 
 `
-
 const HeaderSearch = styled.TextInput`
 
   width:85%;
@@ -134,31 +135,26 @@ const HeaderSearch = styled.TextInput`
   padding-left:5px;
 
 `
-
 const SW_settings = styled.TouchableHighlight`
 
-  height:30px
-  width:30px
-  
+  height:30px;
+  width:30px;
   position:absolute;
   right:20px;
-  top:35px
+  top:35px;
 
 `
-
 const SW_settings_img = styled.Image`
 
-  height:100%
-  width:100%
+  height:100%;
+  width:100%;
 
 `
-
 const HeaderLabel = styled.Text`
 
-  color:#ffffff
-  margin-top:20px
-  font-size:27px
+  color:#ffffff;
+  margin-top:20px;
+  font-size:27px;
 
 `
-
 export default SW_Header

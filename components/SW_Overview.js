@@ -20,16 +20,38 @@ import beachesJson from '../beaches.json'
 
 const OverviewScreen = ({id, liveCamState}) => {
 
+    /**
+     * @summary Used for opening the swell help modal.
+     * 
+     * @description This useState is used for opening and closing the swell help modal, in this component, setSwellModal
+     * is called when the (i) next to the swell data is pressed, the NOT of swellHelpOpen is passed in to switch the state.
+     * The function and the state are then passed down as props into the modal so that it can be used within the modal to
+     * close itself
+     * 
+     * @param {boolean} swellHelpOpen - Contains the open/closed state of the modal
+     */
     const [swellHelpOpen, setSwellModal] = useState(false);
 
+    /**
+     * @summary Used for opening the swell help modal.
+     * 
+     * @description This useState is used for opening and closing the wind help modal, in this component, setWindModal
+     * is called when the (i) next to the wind data is pressed, the NOT of windHelpOpen is passed in to switch the state.
+     * The function and the state are then passed down as props into the modal so that it can be used within the modal to
+     * close itself
+     * 
+     * @param {boolean} windHelpOpen - Contains the open/closed state of the modal
+     */
     const [windHelpOpen, setWindModal] = useState(false);
 
     // Filters the beach data based on the ID passed from the homescreen based on the beach the user selected
     var beachData = beachesJson.filter(b => b.id === id)
-
     beachData = beachData[0]
 
-    // The chart only accept integer widths, so this is a work around to get the width of the parent as a integer.
+    /**
+     * One limitation of react-native-chart-kit is that the width needs to be set using an integer, it wont accept "100%",
+     * so this is used as a work around to get the width of the parent container.
+    */
     const [chartParentWidth, setChartParentWidth] = useState(0);
 
   return (
@@ -131,6 +153,7 @@ const OverviewScreen = ({id, liveCamState}) => {
 
         </QuickOverviewContainer>
         
+        {/* Local Area data */}
         <LocalAreaDataContainer>
 
             <LocalAreaTemp>
@@ -177,6 +200,7 @@ const OverviewScreen = ({id, liveCamState}) => {
 
         </LocalAreaDataContainer>
 
+        {/* Pro Member bar */}
         <ProMemberContainer>
 
             <ProMemberLabel>Want to remove all ads?</ProMemberLabel>
@@ -188,7 +212,8 @@ const OverviewScreen = ({id, liveCamState}) => {
             </GetPro>
 
         </ProMemberContainer>
-
+        
+        {/* Light Level Data */}
         <LightLevelsContainer style={(beachData['light']['current'] == "light")? {backgroundColor:'#ffffff'}:{backgroundColor:'#000000'}}>
 
             {(beachData['light']['current'] == "light")?<CurrentLightImage source={sun}/>:<CurrentLightImage source={moon}/>}
@@ -239,9 +264,10 @@ const OverviewScreen = ({id, liveCamState}) => {
 
         </LightLevelsContainer>
 
+        {/* Beach Activity Data */}
         <BeachActivity>
 
-        <BeachActivityTitle>Popular times:</BeachActivityTitle>
+            <BeachActivityTitle>Popular times:</BeachActivityTitle>
 
             <BeachActivityData>
 
@@ -273,15 +299,8 @@ const OverviewScreen = ({id, liveCamState}) => {
             </BeachActivityData>
 
         </BeachActivity>
-
-        {/* <LineChart
-            data={TidalData}
-            width={'100%'}
-            height={100}
-            verticalLabelRotation={30}
-            bezier
-        /> */}
         
+        {/* Tidal Data */}
         <TidalGraphHeader>Tidal Data</TidalGraphHeader>
 
         <LineChart
@@ -411,6 +430,7 @@ const QuickOverviewContainer = styled.View`
             margin-top:5px;
 
         `
+
     // Wind info appearances
         const QuickOverviewWindInfo = styled.View`
 
@@ -448,7 +468,6 @@ const QuickOverviewContainer = styled.View`
             font-size:30px;
 
         `
-
         const QuickOverviewWindSpeedLocation = styled.View`
 
             width:90px;
@@ -459,7 +478,6 @@ const QuickOverviewContainer = styled.View`
             align-items:center;
 
         `
-
         const WindSpeedLocationLabel = styled.Text`
 
             color:#ffffff;
@@ -471,17 +489,15 @@ const QuickOverviewContainer = styled.View`
 
             color:#000000;
             font-size:13px;
-            margin-top:11px
+            margin-top:11px;
 
         `
-
         const QuickOverviewWindDirectionImage = styled.Image`
 
             width:30px;
             height:30px;
 
         `
-
         const QuickOverViewWindDirectionLabel = styled.Text`
 
             color:#000000;
@@ -501,7 +517,6 @@ const QuickOverviewContainer = styled.View`
         justify-content:space-around;
 
     `
-
     const LocalAreaTemp = styled.View`
 
         height:100%;
@@ -510,7 +525,6 @@ const QuickOverviewContainer = styled.View`
         flex-direction:row;
 
     `
-
     const AirTemp = styled.View`
 
         height:100%;
@@ -519,7 +533,6 @@ const QuickOverviewContainer = styled.View`
         align-items:center;
 
     `
-
     const SeaTemp = styled.View`
 
         height:100%;
@@ -528,7 +541,6 @@ const QuickOverviewContainer = styled.View`
         align-items:center;
 
     `
-
     const LocalAreaTime = styled.View`
 
         height:100%;
@@ -548,14 +560,12 @@ const QuickOverviewContainer = styled.View`
         align-items:center;
 
     `
-
     const ProMemberLabel = styled.Text`
 
         color:white;
         font-size:13px;
 
     `
-
     const GetPro = styled.View`
 
         position: absolute;
@@ -569,7 +579,6 @@ const QuickOverviewContainer = styled.View`
         align-items:center;
 
     `
-
     const GetProLabel = styled.Text`
 
         color:#404040;
@@ -643,7 +652,6 @@ const QuickOverviewContainer = styled.View`
         height:50px;
 
     `
-
     const LiveBoxContainer = styled.View`
     
         width:40px;
@@ -651,17 +659,16 @@ const QuickOverviewContainer = styled.View`
         background-color:#FF0000;
         border-radius:5px
         position:absolute;
-        top:5px
-        left:5px
+        top:5px;
+        left:5px;
         justify-content:center;
         align-items:center;
     
     `
-
     const LiveBoxText = styled.Text`
 
         color:#ffffff;
-        font-size:14px
+        font-size:14px;
         font-weight:bold;
 
     `
@@ -750,6 +757,5 @@ const QuickOverviewContainer = styled.View`
         margin-top:10px;
 
     `
-
 
 export default OverviewScreen

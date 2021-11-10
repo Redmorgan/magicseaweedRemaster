@@ -1,3 +1,6 @@
+/**
+ * @fileoverview This component shows the swell height and wind speed at a particular 3 hour interval.
+ */
 import * as React from 'react';
 import styled from 'styled-components/native';
 
@@ -82,8 +85,6 @@ const ForecastDataRight = styled.View`
     height:50%;
 
 `
-
-
 const SwellHeight = styled.Text`
 
     width:100%;

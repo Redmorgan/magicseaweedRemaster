@@ -1,3 +1,7 @@
+/**
+ * @fileoverview This component is the top component for the 'Forecast' tab, it contains a scroll view which contains 7 ForecastWidgets,
+ * one for each day of the week.
+ */
 import * as React from 'react';
 import styled from 'styled-components/native';
 
@@ -9,8 +13,8 @@ import beachesJson from '../beaches.json'
 
 const ForecastScreen = ({ id }) => {
 
+  // Filters the beach data based on the ID passed from the homescreen based on the beach the user selected
   var beachData = beachesJson.filter(b => b.id === id)
-
   beachData = beachData[0]
 
   return (
@@ -37,7 +41,5 @@ const OverviewScroll = styled.ScrollView`
   padding-top:10px;
 
 `
-
-
 
 export default ForecastScreen

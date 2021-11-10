@@ -13,6 +13,16 @@ const SW_homeScreen = ({ navigation: { navigate } }) => {
 
 const [recentState, updateRecentList] = useState(false)
 
+/**
+ * @summary Flips the boolean state of 'recentState' using updateRecentList
+ * 
+ * @description This function is declared here but is used as a prop which gets passed into the flat list elements,
+ * its used for re-rendering a flat list when there is a state change in a different flat list, in this case it involves
+ * adding or removing beaches to the favourites list when the add-to-favourites star button is pressed. This function is used
+ * with changeFavouriteState to perform this re-rendering.
+ * 
+ * @see  changeFavouriteState()
+ */
 function changeRecentState(){
 
   updateRecentList(!recentState)
@@ -21,13 +31,18 @@ function changeRecentState(){
 
 const [favouriteState, updateFavouriteList] = useState(false)
 
+/**
+ * @summary Flips the boolean state of 'favouriteState' using updateFavouriteList
+ * 
+ * @description Same description as updateFavouriteList() except the action is performed from the other flat list.
+ * 
+ * @see  changeRecentState()
+ */
 function changeFavouriteState(){
 
   updateFavouriteList(!favouriteState)
 
 }
-
-  // var beachData = beachesJson
 
   var beachData = beachesJson
 
@@ -84,7 +99,6 @@ const MainView = styled.View`
   align-items:center;
 
 `
-
 const Footer = styled.View`
 
   width:100%;
@@ -94,7 +108,6 @@ const Footer = styled.View`
   bottom:0;
 
 `
-
 const MainBody = styled.View`
 
   width:95%;
@@ -106,23 +119,19 @@ const MainBody = styled.View`
   border-radius:5px;
 
 `
-
 const SectionHeaderContainer = styled.View`
 
-  width:100%
-  height:10%
+  width:100%;
+  height:10%;
   align-items:center;
   justify-content:center;
 
 `
-
 const SectionHeader = styled.Text`
 
-  font-size:35px
-
+  font-size:35px;
 
 `
-
 const RecentBeachFlatList = styled.FlatList`
 
   width:100%;
@@ -132,7 +141,6 @@ const RecentBeachFlatList = styled.FlatList`
   border-bottom-color: #D8D8D8; 
 
 `
-
 const FavouriteBeachFlatList = styled.FlatList`
 
   width:100%;
