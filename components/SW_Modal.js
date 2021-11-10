@@ -8,6 +8,16 @@ import { Vibration } from 'react-native';
 // Images
 import CloseButtonImg from '../images/greyCloseIcon.png'
 
+/**
+ * @summary A pop-up that can be customised based on what it needs to be used for.
+ * 
+ * @param {function}    onPress - useState function passed through from parent for closing the modal.
+ * @param {string}      title - The title of the modal.
+ * @param {bool}        state - The current state of the modal(opened/closed).
+ * @param {image}       img - The image being displayed to help the user.
+ *  
+ * @returns A formatted modal based on the data passed in.
+ */
 const SW_Modal = ({onPress, title, state, img}) => {
 
     /**

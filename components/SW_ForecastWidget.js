@@ -8,7 +8,15 @@ import styled from 'styled-components/native';
 // Components
 import ForecastSplit from '../components/SW_forecast3hours'
 
-const ForecastWidget = ({ header, weatherData }) => {
+/**
+ * @summary A component for displaying the forecast data for 24 hour.
+ * 
+ * @param {string}  header - The day of the week the data is for.
+ * @param {object}  forecastData - The forecast data for the specified 24 hour period.
+ *  
+ * @returns A horizontal scroll view containing 7 elements.
+ */
+const ForecastWidget = ({ header, forecastData }) => {
 
   return (
 
@@ -24,14 +32,14 @@ const ForecastWidget = ({ header, weatherData }) => {
 
         <ForecastSideScroll horizontal={true} contentContainerStyle={{paddingRight:5}}>
 
-          <ForecastSplit time = '03:00' forecast = {weatherData['3']}></ForecastSplit>
-          <ForecastSplit time = '06:00' forecast = {weatherData['6']}></ForecastSplit>
-          <ForecastSplit time = '09:00' forecast = {weatherData['9']}></ForecastSplit>
-          <ForecastSplit time = '12:00' forecast = {weatherData['12']}></ForecastSplit>
-          <ForecastSplit time = '15:00' forecast = {weatherData['15']}></ForecastSplit>
-          <ForecastSplit time = '18:00' forecast = {weatherData['18']}></ForecastSplit>
-          <ForecastSplit time = '21:00' forecast = {weatherData['21']}></ForecastSplit>
-          <ForecastSplit time = '00:00' forecast = {weatherData['24']}></ForecastSplit>
+          <ForecastSplit time = '03:00' forecast = {forecastData['3']}/>
+          <ForecastSplit time = '06:00' forecast = {forecastData['6']}/>
+          <ForecastSplit time = '09:00' forecast = {forecastData['9']}/>
+          <ForecastSplit time = '12:00' forecast = {forecastData['12']}/>
+          <ForecastSplit time = '15:00' forecast = {forecastData['15']}/>
+          <ForecastSplit time = '18:00' forecast = {forecastData['18']}/>
+          <ForecastSplit time = '21:00' forecast = {forecastData['21']}/>
+          <ForecastSplit time = '00:00' forecast = {forecastData['24']}/>
 
         </ForecastSideScroll>
 

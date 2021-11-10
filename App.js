@@ -8,6 +8,11 @@ import HomeScreen from './pages/SW_homeScreen'
 
 const Stack = createNativeStackNavigator();
 
+/**
+ * @summary Loads the navigation controllers needed for navigation the application, as well as setting the first load screen.
+ *  
+ * @returns The home screen.
+ */
 export default function App() {
   return (
 

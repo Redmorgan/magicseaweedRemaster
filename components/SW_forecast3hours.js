@@ -4,6 +4,14 @@
 import * as React from 'react';
 import styled from 'styled-components/native';
 
+/**
+ * @summary The forecast for a 3 hour interval of wind speed and swell height.
+ * 
+ * @param {string}  time - The time interval.
+ * @param {object}  forecast - Contains the wind speed and swell height for the specified time interval.
+ *  
+ * @returns A formatted component containing the passed through time interval, swell height, and wind speed.
+ */
 const Forecast3Hour = ({ time, forecast }) => {
 
   return (

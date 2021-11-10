@@ -15,6 +15,14 @@ import calendarImg from "../images/calendarIcon.png";
 
 const Tab = createMaterialTopTabNavigator();
 
+/**
+ * @summary The bottom nav bar used for navigating between the overview and forecast tabs.
+ * 
+ * @param {string}  id - The id of the beach.
+ * @param {boolean} liveCamState - Shows if the beach has a live cam or not.
+ *  
+ * @returns A bottom nav bar that has options for overview and forecast.
+ */
 const SW_PageNav = ({ id, liveCamState }) => {
 
   return (

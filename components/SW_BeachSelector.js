@@ -14,6 +14,19 @@ import unfavouriteImg from '../images/emptyStar.png'
 import cameraImg from '../images/liveCam.png'
 import caretImg from '../images/caretRight.png'
 
+/**
+ * @summary The onscreen component for the beach selector, used in flat lists within 'SW_homeScreen.js'
+ * 
+ * @param {string}    beachName - The name of the beach.
+ * @param {function}  navigate - Passed through navigation function for navigation between stacks.
+ * @param {string}    beachID - The ID of the beach.
+ * @param {string}    listType - Differentiates the flat-list the beach selector is being added into.
+ * @param {boolean}   liveCamBool - Boolean showing if there is a live cam or not.
+ * @param {function}  updateRecentList - Passed through useState function used for updating the 'RecentBeachFlatList' flat-list on 'SW_homeScreen.js'.
+ * @param {function}  updateFavouriteList - Passed through useState function used for updating the 'FavouriteBeachFlatList' flat-list on 'SW_homeScreen.js'.
+ *  
+ * @returns The formatted beach selector component
+ */
 const BeachSelector = ({ beachName, navigate, beachID, listType, liveCamBool, updateRecentList, updateFavouriteList }) => {
 
   /** @const {bool} favouriteState holds the favourite state of the beach based on the stored async data. */

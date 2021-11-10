@@ -18,7 +18,15 @@ import windHelp from '../images/windHelp.png'
 
 import beachesJson from '../beaches.json'
 
-const OverviewScreen = ({id, liveCamState}) => {
+/**
+ * @summary The main screen loading current data about the selected beach.
+ * 
+ * @param {string}  id - The ID of the beach.
+ * @param {boolean} liveCamState - Shows if the beach has a live cam or not.
+ *  
+ * @returns A formatted page displaying data about the currently selected beach.
+ */
+const OverviewScreen = ({ id, liveCamState }) => {
 
     /**
      * @summary Used for opening the swell help modal.

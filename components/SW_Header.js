@@ -13,6 +13,14 @@ import msw_logo from '../images/msw_logo.png'
 import settingsCog from '../images/settingsCog.png'
 import backArrow from '../images/backArrow.png'
 
+/**
+ * @summary The header that appears at the top of each screen, that changes based on the what screen its being loaded into.
+ * 
+ * @param {string}  name - The screen that is being loaded.
+ * @param {string}  beachName - The current beaches name.
+ *  
+ * @returns The formatted header.
+ */
 const SW_Header = ({ name, beachName }) => {
 
   const navigation = useNavigation();

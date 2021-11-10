@@ -9,40 +9,47 @@ import BeachSelector from '../components/SW_BeachSelector';
 // JSON
 import beachesJson from '../beaches.json'
 
+/**
+ * @summary The component building up the home screen of the application.
+ * 
+ * @param {function}  navigation - Passed through navigation function for navigation between stacks.
+ *  
+ * @returns The home screen page of the application.
+ */
 const SW_homeScreen = ({ navigation: { navigate } }) => {
 
-const [recentState, updateRecentList] = useState(false)
+  const [recentState, updateRecentList] = useState(false)
 
-/**
- * @summary Flips the boolean state of 'recentState' using updateRecentList
- * 
- * @description This function is declared here but is used as a prop which gets passed into the flat list elements,
- * its used for re-rendering a flat list when there is a state change in a different flat list, in this case it involves
- * adding or removing beaches to the favourites list when the add-to-favourites star button is pressed. This function is used
- * with changeFavouriteState to perform this re-rendering.
- * 
- * @see  changeFavouriteState()
- */
-function changeRecentState(){
+  /**
+   * @summary Flips the boolean state of 'recentState' using updateRecentList
+   * 
+   * @description This function is declared here but is used as a prop which gets passed into the flat list elements,
+   * its used for re-rendering a flat list when there is a state change in a different flat list, in this case it involves
+   * adding or removing beaches to the favourites list when the add-to-favourites star button is pressed. This function is used
+   * with changeFavouriteState to perform this re-rendering.
+   * 
+   * @see  changeFavouriteState()
+   */
+  function changeRecentState(){
 
-  updateRecentList(!recentState)
+    updateRecentList(!recentState)
 
-}
+  }
 
-const [favouriteState, updateFavouriteList] = useState(false)
+  const [favouriteState, updateFavouriteList] = useState(false)
 
-/**
- * @summary Flips the boolean state of 'favouriteState' using updateFavouriteList
- * 
- * @description Same description as updateFavouriteList() except the action is performed from the other flat list.
- * 
- * @see  changeRecentState()
- */
-function changeFavouriteState(){
+  /**
+   * @summary Flips the boolean state of 'favouriteState' using updateFavouriteList
+   * 
+   * @description Same description as updateFavouriteList() except the action is performed from the other flat list.
+   * 
+   * @see  changeRecentState()
+   */
+  function changeFavouriteState(){
 
-  updateFavouriteList(!favouriteState)
+    updateFavouriteList(!favouriteState)
 
-}
+  }
 
   var beachData = beachesJson
 
@@ -79,7 +86,6 @@ function changeFavouriteState(){
           renderItem={({ item }) => (<BeachSelector beachID = {item['id']} beachName = {item['name']} listType="favourite" liveCamBool = {item['LiveCam']} navigate={navigate} updateRecentList={() => changeRecentState()} updateFavouriteList={() => changeFavouriteState()}></BeachSelector>)}
           contentContainerStyle={{paddingBottom:10}}
         />
-
 
       </MainBody>
 
