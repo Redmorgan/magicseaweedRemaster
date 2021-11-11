@@ -1,3 +1,7 @@
+/**
+ * @fileoverview The home screen of the application where the user can access the beaches as well as saving them to their favourites.
+ */
+
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import styled from 'styled-components/native';
@@ -10,7 +14,7 @@ import BeachSelector from '../components/SW_BeachSelector';
 import beachesJson from '../beaches.json'
 
 /**
- * @summary The component building up the home screen of the application.
+ * @summary The components building up the home screen of the application.
  * 
  * @param {function}  navigation - Passed through navigation function for navigation between stacks.
  *  

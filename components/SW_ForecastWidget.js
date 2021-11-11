@@ -2,6 +2,7 @@
  * @fileoverview This component displays the 8 3-hour interval widgets in a horizontal scrollview, within the compoenent you can
  * see the swell height and the wind speed for a 24 period on a specified day.
  */
+
 import * as React from 'react';
 import styled from 'styled-components/native';
 

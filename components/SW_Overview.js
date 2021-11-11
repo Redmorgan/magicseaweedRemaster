@@ -1,3 +1,7 @@
+/**
+ * @fileoverview The main overview component of the application that gets loaded into the tab navigator that shows all of the current beach data about the selected beach.
+ */
+
 import React, {useState} from 'react';
 import { Text, Vibration } from 'react-native';
 import styled from 'styled-components/native';
@@ -16,6 +20,7 @@ import moon from '../images/moonIcon.png'
 import swellHelp from '../images/swellHelp.png'
 import windHelp from '../images/windHelp.png'
 
+// JSON
 import beachesJson from '../beaches.json'
 
 /**
@@ -28,28 +33,8 @@ import beachesJson from '../beaches.json'
  */
 const OverviewScreen = ({ id, liveCamState }) => {
 
-    /**
-     * @summary Used for opening the swell help modal.
-     * 
-     * @description This useState is used for opening and closing the swell help modal, in this component, setSwellModal
-     * is called when the (i) next to the swell data is pressed, the NOT of swellHelpOpen is passed in to switch the state.
-     * The function and the state are then passed down as props into the modal so that it can be used within the modal to
-     * close itself
-     * 
-     * @param {boolean} swellHelpOpen - Contains the open/closed state of the modal
-     */
     const [swellHelpOpen, setSwellModal] = useState(false);
 
-    /**
-     * @summary Used for opening the swell help modal.
-     * 
-     * @description This useState is used for opening and closing the wind help modal, in this component, setWindModal
-     * is called when the (i) next to the wind data is pressed, the NOT of windHelpOpen is passed in to switch the state.
-     * The function and the state are then passed down as props into the modal so that it can be used within the modal to
-     * close itself
-     * 
-     * @param {boolean} windHelpOpen - Contains the open/closed state of the modal
-     */
     const [windHelpOpen, setWindModal] = useState(false);
 
     // Filters the beach data based on the ID passed from the homescreen based on the beach the user selected

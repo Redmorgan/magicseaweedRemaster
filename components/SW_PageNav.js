@@ -1,6 +1,7 @@
 /**
  * @fileoverview Contains the page navigation component used for navigating between the 'Overview' and the 'Forecast' tab.
  */
+
 import * as React from "react";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import styled from "styled-components/native";

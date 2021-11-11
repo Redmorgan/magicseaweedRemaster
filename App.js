@@ -1,3 +1,7 @@
+/**
+ * @fileoverview The top build file of the application that loads all of the navigation for the app.
+ */
+
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';

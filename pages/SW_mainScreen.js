@@ -1,3 +1,7 @@
+/**
+ * @fileoverview The top parent of the main screen that contains template appearance that is seen on all of the pages as well as the tab page navigation.
+ */
+
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import styled from 'styled-components/native';
@@ -6,7 +10,13 @@ import styled from 'styled-components/native';
 import SW_Header from '../components/SW_Header';
 import SW_PageNav from '../components/SW_PageNav';
 
-
+/**
+ * @summary The components building up the main screen of the application, displaying all the beach data.
+ * 
+ * @param {function}  route - Pass through data from the previous layer of the stack.
+ *  
+ * @returns The main screen page of the application.
+ */
 const SW_mainScreen = ({ route }) => {
 
   return (

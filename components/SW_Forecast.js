@@ -2,6 +2,7 @@
  * @fileoverview This component is the top component for the 'Forecast' tab, it contains a scroll view which contains 7 ForecastWidgets,
  * one for each day of the week.
  */
+
 import * as React from 'react';
 import styled from 'styled-components/native';
 
@@ -14,7 +15,7 @@ import beachesJson from '../beaches.json'
 /**
  * @summary The onscreen component for the beach selector, used in flat lists within 'SW_homeScreen.js'.
  * 
- * @param {string} beachName - The ID of the beach.
+ * @param {string} id - The ID of the beach.
  *  
  * @returns a 7-day 24-hour swell height and wind speed forecast.
  */

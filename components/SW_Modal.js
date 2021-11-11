@@ -1,6 +1,7 @@
 /**
  * @fileoverview This component is a customisable pop-up that mainly gets used for helping users to understand onscreen information.
  */
+
 import React from 'react';
 import styled from 'styled-components/native';
 import { Vibration } from 'react-native';
